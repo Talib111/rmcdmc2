@@ -24,6 +24,7 @@ function Sidebar() {
                 <ul className="px-3 list-none">
                    <SidebarLink title="Inbox" />
                    <SidebarLink title="Dashboard" />
+                   <SidebarLink title="Prop-dtl" />
                    <SidebarLink title="Menu Permission" />
                    <SidebarLink title="User" />
                    <SidebarLink title="Master" />
