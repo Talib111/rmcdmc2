@@ -16,7 +16,7 @@ import { connect } from "react-redux";
 function RightSidebar(props) {
     return (
         <>
-            <div className="shadow-2xl px-0 bg-white h-full overflow-hidden absolute top-16 right-0" style={props.RightNavCloseStatus==false?{'width':'225px'}:{'width':'0'}}>
+            <div className="shadow-2xl px-0 bg-white h-full overflow-hidden absolute top-16 right-0" style={props.RightNavCloseStatus==false?{'width':'225px','transition':'0.5s'}:{'width':'0','transition':'0.5s'}}>
              <div className="grid grid-cols-3 gap-2 pt-4 h-12">
                  <div className='flex justify-center border-b-2 border-indigo-200'><BsChat color="gray"/></div>
                  <div className='flex justify-center'><TbAlertCircle color="gray"/><span className='text-xs text-gray-400 pl-2'>Report</span></div>

@@ -22,8 +22,8 @@ function Sidebar() {
                     <ImageCard />
                 </div>
                 <ul className="px-3 list-none">
-                   <SidebarLink title="Dashboard" />
                    <SidebarLink title="Inbox" />
+                   <SidebarLink title="Dashboard" />
                    <SidebarLink title="Menu Permission" />
                    <SidebarLink title="User" />
                    <SidebarLink title="Master" />
