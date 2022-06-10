@@ -16,6 +16,7 @@ function TopHeaderNav() {
       <div className="grid grid-cols-12 w-100 px-0 h-16" style={{'backgroundColor':'#25476A'}}>
        <div className="sm:hidden md:block col-span-2"> <LogoText /></div>
        <div className='col-span-3 place-items-center'><NavigationButton/></div>
+       <div className='col-span-3 place-items-center col-start-10'><HeaderIcons/></div>
       
       </div>
     </>

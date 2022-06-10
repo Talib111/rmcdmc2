@@ -1,6 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////////
 //    Author - Talib Hussain
+//    Date - 
 //    Version - 1.0
+//    Revison - 1
 //    Project - rmcdmc
 //    Component  - Sidebar
 //    DESCRIPTION - This is toggle sidebar component.

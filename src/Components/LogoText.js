@@ -13,8 +13,7 @@ function LogoText() {
   
 
    <div className="grid grid-cols-12 place-items-center h-full">
-      <div className='pl-20'><img className='rounded-circle' style={{'width':'36px'}} src="" alt="image" /></div>
-      {/* <div className='pl-20'><img className='rounded-circle' style={{'width':'36px'}} src="http://192.168.0.16:822/RMCDMC/public/assets/img/logo1.png" alt="image" /></div> */}
+      <div className='pl-20'><img className='rounded-circle' style={{'width':'36px'}} src="http://smartulb.co.in/RMCDMC/public/assets/img/logo1.png" alt="image" /></div>
       <div className='col-span-10'><h4 className='text-white font-bold text-lg'>JHARKHAND</h4></div>
   </div>
    </>

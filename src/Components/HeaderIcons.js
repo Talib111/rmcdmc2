@@ -6,16 +6,22 @@
 //    DESCRIPTION - HeaderIcons Component
 //////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import {AiOutlineUser} from 'react-icons/ai'
+import {BsThreeDotsVertical} from 'react-icons/bs'
+import {BsBell} from 'react-icons/bs'
+
 
 function HeaderIcons() {
   return (
-   <>
-   <div className="bg-success d-flex w-100" style={{'marginLeft':'300px'}}>
-       <div className="flex-1">i</div>
-       <div className="flex-1">i</div>
-       <div className="flex-1">i</div>
-   </div>
-   </>
+    <>
+      <div className="grid grid-cols-12 place-items-center h-full pr-8">
+        <div className='cursor-pointer col-start-10' ><BsBell color='white' size={16} /></div>
+        <div className='cursor-pointer' ><AiOutlineUser color='white' size={16} /></div>
+        <div className='cursor-pointer' ><BsThreeDotsVertical color='white' size={16} /></div>
+       
+      </div>
+    </>
   )
 }
 
