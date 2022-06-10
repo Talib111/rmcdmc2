@@ -29,8 +29,8 @@ function Home(props) {
       <Header />
       <div className="grid grid-cols-12 md:gap-4 mt-12 h-full relative -top-52">
         <div className="xs:col-span-0  md:col-span-2 overflow-hidden" style={navCloseStatus == true ? { 'width': '0', 'paddingRight': '0', 'transition': '1s' } : { 'width': 'auto', 'paddingRight': '2px', 'transition': '1s' }}><Sidebar /></div>
-        {/* <div className="xs:col-span-12 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div> */}
-        <div className="xs:col-span-12 md:col-span-10 md:pr-6 md:pl-2 ">
+        <div className="xs:col-span-12 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
+        {/* <div className="xs:col-span-12 md:col-span-10 md:pr-6 md:pl-2 ">
           <BasicDetailsCard cardTitle="Property Details" />
           <div className='mt-6'></div>
           <BasicDetailsCard cardTitle="Owner Details" />
@@ -49,7 +49,7 @@ function Home(props) {
           <div className='mt-6'></div>
           <BasicDetailsCard cardTitle="Payment Details" />
         
-        </div>
+        </div> */}
       </div>
       <RightSidebar />
     </>
