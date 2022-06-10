@@ -8,12 +8,15 @@
 import React from 'react'
 import HeaderIcons from './HeaderIcons'
 import LogoText from './LogoText'
+import NavigationButton from './NavigationButton'
 
 function TopHeaderNav() {
   return (
     <>
-      <div className="d-flex w-100 px-0" style={{'backgroundColor':'#25476A'}}>
-       <div className="flex-1"> <LogoText /></div>
+      <div className="grid grid-cols-12 w-100 px-0 h-16" style={{'backgroundColor':'#25476A'}}>
+       <div className="sm:hidden md:block col-span-2"> <LogoText /></div>
+       <div className='col-span-3 place-items-center'><NavigationButton/></div>
+      
       </div>
     </>
   )

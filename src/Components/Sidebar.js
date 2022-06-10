@@ -15,7 +15,7 @@ function Sidebar() {
 
     return (
         <>
-            <div className="shadow-lg px-0 bg-white h-full pb-12">
+            <div className="shadow-lg px-0 bg-white h-full pb-12 overflow-hidden">
                 <div className='py-4'>
                     <ImageCard />
                 </div>
