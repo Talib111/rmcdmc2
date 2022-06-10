@@ -14,8 +14,6 @@ function TopHeaderNav() {
     <>
       <div className="d-flex w-100 px-0" style={{'backgroundColor':'#25476A'}}>
        <div className="flex-1"> <LogoText /></div>
-       {/* <div className="flex-1 bg-success">home</div> */}
-      {/* <div className="flex-1">  <HeaderIcons /></div> */}
       </div>
     </>
   )
