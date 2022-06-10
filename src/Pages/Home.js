@@ -25,9 +25,9 @@ function Home(props) {
   return (
     <>
       <Header />
-      <div className="sm:gap-0 sm:block md:grid md:grid-cols-12 md:gap-4 mt-12 h-full relative -top-52">
-        <div className="xs:hidden md:visible md:col-span-2 overflow-hidden bg-red-600" style={navCloseStatus==true?{'width':'0','paddingRight':'0','transition':'1s'}:{'width':'auto','paddingRight':'2px','transition':'1s'}}><Sidebar /></div>
-        <div className="sm:w-full md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
+      <div className='sm:gap-0 sm:block md:grid md:grid-cols-12 md:gap-4 mt-12 h-full relative -top-52'>
+        <div className="xs:hidden md:visible md:col-span-0 overflow-hidden bg-red-600" style={navCloseStatus==true?{'width':'0','paddingRight':'0','transition':'1s'}:{'width':'auto','paddingRight':'2px','transition':'1s'}}><Sidebar /></div>
+        <div className="sm:w-full md:col-start-3 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
       </div>
     </>
   )
