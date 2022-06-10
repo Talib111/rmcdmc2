@@ -13,6 +13,7 @@ import Sidebar from '../Components/Sidebar'     // Importing Sidebar component
 import Header from '../Components/Header'
 import HomeCard from '../Components/HomeCard'
 import { connect } from "react-redux";
+import RightSidebar from '../Components/RightSidebar'
 
 // HOME FUNCTION
 function Home(props) {
@@ -29,6 +30,7 @@ function Home(props) {
         <div className="xs:hidden md:visible md:col-span-2 overflow-hidden" style={navCloseStatus==true?{'width':'0','paddingRight':'0','transition':'1s'}:{'width':'auto','paddingRight':'2px','transition':'1s'}}><Sidebar /></div>
         <div className="sm:w-full md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
       </div>
+      <RightSidebar/>
     </>
   )
 }

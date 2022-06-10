@@ -1,7 +1,8 @@
 import { useReducer } from "react";
 
 const initialState = {
-  navCloseStatus: false
+  navCloseStatus: false,
+  RightNavCloseStatus: true
 };
 
 const Reducer = (state = initialState, action) => {
@@ -10,6 +11,10 @@ const Reducer = (state = initialState, action) => {
       return { ...state, navCloseStatus: false };
     case "NAV_CLOSE":
       return { ...state, navCloseStatus: true };
+    case "RIGHT_NAV_OPEN":
+      return { ...state, RightNavCloseStatus: false };
+    case "RIGHT_NAV_CLOSE":
+      return { ...state, RightNavCloseStatus: true };
     default:
       return state;
   }
