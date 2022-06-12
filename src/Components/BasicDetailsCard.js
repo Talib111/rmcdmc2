@@ -12,8 +12,8 @@ import DetailsRow from './DetailsRow'
 function BasicDetailsCard(props) {
   return (
     <>
-      <div className="bg-white text-xs pb-8 border-2" style={{'border':'1px solid #3A444E'}}>
-        <div className='h-8 text-sm text-white px-4 grid' style={{ 'backgroundColor': '#3A444E' }}>{props.cardTitle}</div>
+      <div className="bg-white text-xs pb-8 border-2 mb-6" style={{'border':'1px solid #3A444E'}}>
+        <div className='h-8 text-sm text-white px-4 flex items-center' style={{ 'backgroundColor': '#3A444E' }}>{props.cardTitle}</div>
        <DetailsRow title="Holding No." value="12" />
        <DetailsRow title="Holding No." value="12" />
        <DetailsRow title="Holding No." value="12" />
