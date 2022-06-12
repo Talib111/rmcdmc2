@@ -1,6 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////////
 //    Author - Talib Hussain
+//    Date - 
 //    Version - 1.0
+//    Revison - 1
 //    Project - rmcdmc
 //    Component  - Sidebar
 //    DESCRIPTION - This is toggle sidebar component.
@@ -20,8 +22,9 @@ function Sidebar() {
                     <ImageCard />
                 </div>
                 <ul className="px-3 list-none">
-                   <SidebarLink title="Dashboard" />
                    <SidebarLink title="Inbox" />
+                   <SidebarLink title="Dashboard" />
+                   <SidebarLink title="Prop-dtl" />
                    <SidebarLink title="Menu Permission" />
                    <SidebarLink title="User" />
                    <SidebarLink title="Master" />
