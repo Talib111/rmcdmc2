@@ -27,11 +27,6 @@ function Home(props) {
   return (
     <>
       <Header />
-<<<<<<< HEAD
-      <div className='sm:gap-0 sm:block md:grid md:grid-cols-12 md:gap-4 mt-12 h-full relative -top-52'>
-        <div className="xs:hidden md:visible md:col-span-0 overflow-hidden bg-red-600" style={navCloseStatus==true?{'width':'0','paddingRight':'0','transition':'1s'}:{'width':'auto','paddingRight':'2px','transition':'1s'}}><Sidebar /></div>
-        <div className="sm:w-full md:col-start-3 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
-=======
       <div className="grid grid-cols-12 md:gap-4 mt-12 h-full relative -top-52">
         <div className="xs:col-span-0  md:col-span-2 overflow-hidden" style={navCloseStatus == true ? { 'width': '0', 'paddingRight': '0', 'transition': '1s' } : { 'width': 'auto', 'paddingRight': '2px', 'transition': '1s' }}><Sidebar /></div>
         <div className="xs:col-span-12 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
@@ -55,7 +50,6 @@ function Home(props) {
           <BasicDetailsCard cardTitle="Payment Details" />
         
         </div> */}
->>>>>>> b1ae2b292786ccfdedcc6e8b72bf0c099422f968
       </div>
       <RightSidebar />
     </>
