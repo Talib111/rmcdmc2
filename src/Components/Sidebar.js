@@ -22,13 +22,24 @@ function Sidebar(props) {
   
     }, [props.navCloseStatus])
 
+    const expandSidebar = ()=>{
+        if(props.navOriginalCloseStatus==true){
+            props.NAV_OPEN()
+        }
+    }
+    const contractSidebar = ()=>{
+        if(props.navOriginalCloseStatus==true){
+            props.NAV_CLOSE()
+        }
+    }
+
     return (
         <>
-            <div className="shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0" style={navCloseStatus == true ? { 'width': '0', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000' }}>
+            <div className="shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0" style={navCloseStatus == true ? { 'width': '32px', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000'}} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}>
                 <div className='py-4' >
-                    <ImageCard />
+                    <ImageCard  />
                 </div>
-                <ul className="px-3 list-none" >
+                <ul className="list-none" style={navCloseStatus == true ? {'padding':'0px 2px 0px 2px'} : { 'padding':'0px 10px 0px 10px'}}>
                    <SidebarLink title="Inbox" />
                    <SidebarLink title="Dashboard" />
                    <SidebarLink title="Prop-dtl" />
@@ -52,7 +63,8 @@ function Sidebar(props) {
 //for redux
 const mapStateToProps = (state) => {
     return {
-      navCloseStatus: state.navCloseStatus
+      navCloseStatus: state.navCloseStatus,
+      navOriginalCloseStatus: state.navOriginalCloseStatus
     };
   };
   

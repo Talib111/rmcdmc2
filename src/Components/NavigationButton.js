@@ -20,8 +20,10 @@ function NavigationButton(props) {
        
         if(props.navCloseStatus==false){
             props.NAV_CLOSE()
+            props.NAV_CLOSE_ORIGINAL_STATUS()
         }else{
             props.NAV_OPEN()
+            props.NAV_OPEN_ORIGINAL_STATUS()
 
         }
         console.log(props.navCloseStatus)
@@ -47,7 +49,9 @@ const mapStateToProps = (state) => {
     return {
       // buyCake: () => dispatch(buyCake())
       NAV_OPEN: (data2) => dispatch({ type: "NAV_OPEN"}),
-      NAV_CLOSE: (data3) => dispatch({ type: "NAV_CLOSE" })
+      NAV_CLOSE: (data3) => dispatch({ type: "NAV_CLOSE" }),
+      NAV_OPEN_ORIGINAL_STATUS: (data3) => dispatch({ type: "NAV_OPEN_ORIGINAL_STATUS" }),
+      NAV_CLOSE_ORIGINAL_STATUS: (data3) => dispatch({ type: "NAV_CLOSE_ORIGINAL_STATUS" })
     };
   };
 
