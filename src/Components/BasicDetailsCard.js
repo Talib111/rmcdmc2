@@ -2,6 +2,7 @@
 //    Author - Talib Hussain
 //    Version - 1.0
 //    Date -  10 june 2022
+//    Revision - 1
 //    Project - rmcdmc
 //    Component  - BasicDetailsCard
 //    DESCRIPTION - BasicDetailsCard Component
