@@ -6,7 +6,7 @@
 //    DESCRIPTION - TopHeaderNav Component of header 
 //////////////////////////////////////////////////////////////////////////////////////
 import React, { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { HiOutlineMenuAlt2 } from 'react-icons/hi'
 import { connect } from "react-redux";
 
 
@@ -29,7 +29,7 @@ function NavigationButton(props) {
     return (
         <>
             <div className="grid grid-cols-12 place-items-center h-full">
-                <div className='cursor-pointer' onClick={navToggle}><GiHamburgerMenu color='white' size={16} /></div>
+                <div className='cursor-pointer' onClick={navToggle}><HiOutlineMenuAlt2 color='white' size={16} /></div>
                 <div className='col-span-10'><h4 className='text-white font-bold text-lg'>Ranchi Municipal Corporation</h4></div>
             </div>
         </>

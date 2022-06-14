@@ -12,6 +12,7 @@ import React, { useEffect, useState } from 'react'
 import ImageCard from './ImageCard';
 import SidebarLink from './SidebarLink';
 import { connect } from "react-redux";
+import Sidebar2 from './Sidebar2';
 
 
 function Sidebar(props) {
@@ -25,10 +26,11 @@ function Sidebar(props) {
     return (
         <>
             <div className="shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0" style={navCloseStatus == true ? { 'width': '0', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000' }}>
-                <div className='py-4' >
+                <div className='py-4'>
                     <ImageCard />
                 </div>
                 <ul className="px-3 list-none" >
+                  <Sidebar2/>
                    <SidebarLink title="Inbox" />
                    <SidebarLink title="Dashboard" />
                    <SidebarLink title="Prop-dtl" />

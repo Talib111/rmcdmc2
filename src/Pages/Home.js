@@ -15,6 +15,7 @@ import HomeCard from '../Components/HomeCard'
 import { connect } from "react-redux";
 import RightSidebar from '../Components/RightSidebar'
 import BasicDetailsCard from '../Components/BasicDetailsCard'
+import DataGrid2 from '../Components/DataGrid'
 
 // HOME FUNCTION
 function Home(props) {
@@ -27,7 +28,11 @@ function Home(props) {
   return (
     <>
       <div className="grid grid-cols-12 md:gap-4 mt-12 h-full relative -top-52">
-        <div className="xs:col-span-12 md:col-start-3 md:col-span-10 md:pr-6 md:pl-2 "><HomeCard /></div>
+        <div className="xs:col-span-12 md:col-start-3 md:col-span-10 md:pr-6 md:pl-2 ">
+          <HomeCard />
+        {/* <DataGrid2/> */}
+        {/* <MiSidebar/> */}
+        </div>
       </div>
     </>
   )
