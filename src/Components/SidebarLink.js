@@ -22,9 +22,6 @@ function SidebarLink(props) {
                 <div className="flex-initial w-40">
                     <RawLink path="/home" title={props.title} />
                 </div>
-                <div className="flex-1">
-                    <IoIosArrowForward size={13} color="white" />
-                </div>
             </li>
         </>
     )

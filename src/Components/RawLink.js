@@ -12,7 +12,7 @@ function RawLink(props) {
   return (
    <>
    {/* <Link to={props.path}>{props.title}</Link> */}
-  <Link to={{pathname:'/prop-dtl'}}><li style={{'textDecoration':'none','color':'white','fontSize':'13px','fontWeight':'400','paddingLeft':'10px'}} href={props.path}>{props.title}</li></Link>
+  <Link to={{pathname:'#'}}><li style={{'textDecoration':'none','color':'white','fontSize':'13px','fontWeight':'400','paddingLeft':'10px'}} href={props.path}>{props.title}</li></Link>
    
    </>
   )
