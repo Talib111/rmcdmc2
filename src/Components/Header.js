@@ -14,8 +14,8 @@ function Header() {
   return (
    <>
    <TopHeaderNav/>
-   <div className="w-100" style={{'backgroundColor':'#25476A','height':'160px'}}>
-   </div>
+   {/* <div className="w-100" style={{'backgroundColor':'#25476A','height':'160px'}}>
+   </div> */}
    </>
   )
 }

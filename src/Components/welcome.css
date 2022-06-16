@@ -1,4 +1,8 @@
 .welcome_c{
     background: rgb(254,254,254);
-background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(89,122,195,1) 1%, rgba(98,240,228,1) 100%);
+background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(22,78,99,1) 1%, rgba(98,240,228,1) 100%);
 }
+/* .welcome_c{
+    background: rgb(254,254,254);
+background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgba(89,122,195,1) 1%, rgba(98,240,228,1) 100%);
+} */

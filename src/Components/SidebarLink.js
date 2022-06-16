@@ -15,15 +15,15 @@ import { IoIosArrowForward } from 'react-icons/io';
 function SidebarLink(props) {
     return (
         <>
-            <li className='flex items-center pl-2 mt-4'>
+            <li className='flex items-center pl-2 mt-4' style={{'width':'250px'}}>
                 <div className="flex-none ">
-                    <FaEnvelope size={13} color="gray" />
+                    <FaEnvelope size={13} color="white" />
                 </div>
                 <div className="flex-initial w-40">
                     <RawLink path="/home" title={props.title} />
                 </div>
                 <div className="flex-1">
-                    <IoIosArrowForward size={13} color="gray" />
+                    <IoIosArrowForward size={13} color="white" />
                 </div>
             </li>
         </>

@@ -9,13 +9,13 @@
 //////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
 
-function ImageCard() {
+function ImageCard(props) {
   return (
    <>
    <div className="text-center" >
        <img className='rounded-full m-auto mt-4' style={{'width':'58px'}} src="http://smartulb.co.in/RMCDMC/public/assets/img/avatar/default_avatar.png" alt="image" />
-       <p className='text-sm font-medium'>Super Admin</p>
-       <p className='text-xs'>rahul@aadrikaenterprises.com</p>
+       <p className='text-sm font-medium' style={props.sideBarStatus==true?{'display':'none'}:{'display':'block'}}>Super Admin</p>
+       <p className='text-xs' style={props.sideBarStatus==true?{'display':'none'}:{'display':'block'}}>rahul@aadrikaenterprises.com</p>
    </div>
    </>
   )

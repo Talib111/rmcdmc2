@@ -14,7 +14,7 @@ function HomeCard() {
   return (
    <>
    
-   <div className="w-full h-full bg-white rounded-sm pt-2 pb-16 px-12">
+   <div className="w-full h-full bg-white mt-4 rounded-sm pt-2 pb-16 px-12">
    <div><p className='text-sm font-semibold text-gray-600 pb-8'>Welcome To Profile Page</p></div>
      <div className="grid grid-cols-3 w-full h-full shadow-lg">
        <div><UserCard/></div>

@@ -30,9 +30,9 @@ function HeaderIcons(props) {
   return (
     <>
       <div className="grid grid-cols-12 place-items-center h-full pr-8">
-        <div className='cursor-pointer col-start-10' ><BsBell color='white' size={16} /></div>
-        <div className='cursor-pointer' ><AiOutlineUser color='white' size={16} /></div>
-        <div className='cursor-pointer' onClick={rightNavToggle}><BsThreeDotsVertical color='white' size={16} /></div>
+        <div className='cursor-pointer col-start-10' ><BsBell color='black' size={16} /></div>
+        <div className='cursor-pointer' ><AiOutlineUser color='black' size={16} /></div>
+        <div className='cursor-pointer' onClick={rightNavToggle}><BsThreeDotsVertical color='black' size={16} /></div>
        
       </div>
     </>

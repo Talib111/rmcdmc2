@@ -20,8 +20,10 @@ function NavigationButton(props) {
        
         if(props.navCloseStatus==false){
             props.NAV_CLOSE()
+            props.NAV_CLOSE_ORIGINAL_STATUS()
         }else{
             props.NAV_OPEN()
+            props.NAV_OPEN_ORIGINAL_STATUS()
 
         }
         console.log(props.navCloseStatus)
@@ -29,8 +31,8 @@ function NavigationButton(props) {
     return (
         <>
             <div className="grid grid-cols-12 place-items-center h-full">
-                <div className='cursor-pointer' onClick={navToggle}><HiOutlineMenuAlt2 color='white' size={16} /></div>
-                <div className='col-span-10'><h4 className='text-white font-bold text-lg'>Ranchi Municipal Corporation</h4></div>
+                <div className='cursor-pointer' onClick={navToggle}><HiOutlineMenuAlt2 color='black' size={16} /></div>
+                <div className='col-span-10'><h4 className='text-gray-900 font-bold text-lg'>Ranchi Municipal Corporation</h4></div>
             </div>
         </>
     )
@@ -47,7 +49,9 @@ const mapStateToProps = (state) => {
     return {
       // buyCake: () => dispatch(buyCake())
       NAV_OPEN: (data2) => dispatch({ type: "NAV_OPEN"}),
-      NAV_CLOSE: (data3) => dispatch({ type: "NAV_CLOSE" })
+      NAV_CLOSE: (data3) => dispatch({ type: "NAV_CLOSE" }),
+      NAV_OPEN_ORIGINAL_STATUS: (data3) => dispatch({ type: "NAV_OPEN_ORIGINAL_STATUS" }),
+      NAV_CLOSE_ORIGINAL_STATUS: (data3) => dispatch({ type: "NAV_CLOSE_ORIGINAL_STATUS" })
     };
   };
 
