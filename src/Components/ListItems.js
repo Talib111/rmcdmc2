@@ -19,8 +19,8 @@ export default function ListItems(props) {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={props.listNotes} secondary={props.date} />
-        <span onClick={()=> props.removeNotes}>
+        <ListItemText primary={props.bugText} secondary={props.date} />
+        <span onClick={()=> props.removeNotes} className="cursor-pointer hover:shadow-lg">
         <ClearIcon color="error" />
         </span>
       </ListItem>

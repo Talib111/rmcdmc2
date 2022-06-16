@@ -7,6 +7,8 @@ import Box from '@mui/material/Box';
 import Buttons from './Buttons';
 import InputField from './InputField';
 import ListItems from './ListItems';
+import TextArea from './TextArea';
+import { Button } from '@mui/material';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -43,22 +45,18 @@ function a11yProps(index) {
 
 export default function OffcanvasTabs() {
   const [value, setValue] = React.useState(0);
+  const [tempNotes, settempNotes] = React.useState({ listNotes: 'notes from state', date: '2 12 2022' })
   const [notes, setNotes] = React.useState({ listNotes: 'notes from state', date: '2 12 2022' })
-  const [allNoteList, setallNoteList] = React.useState([{ listNotes: 'notes from state', date: '2 12 2022' }])
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const receiveNotesFromInputField = (notes) => {
-    setNotes({ listNotes: notes, date: Date() })
-    // console.log(notes)
+  const rcvNotesFromInputField = (notes) => {
+    settempNotes({ listNotes: notes, date: Date() })
   }
-  const addNotesToList = ()=>{
-    // console.log('calling me')
-    setallNoteList([{ listNotes: notes.listNotes, date: notes.date },...allNoteList])
-  }
-  const removeNotes = ()=>{
+  const addNotesToList = () => {
+    setNotes({ listNotes: tempNotes.listNotes, date: tempNotes.date })
 
   }
 
@@ -71,21 +69,36 @@ export default function OffcanvasTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-      <span onClick={addNotesToList}>
-            <Buttons title="Edit" variant="contained" size="small" color="primary" />
-          </span>
+        <span onClick={addNotesToList}>
+        </span>
         <div className="w-full h-80 text-white mt-8">
-          <InputField fun={receiveNotesFromInputField} label="Add Short Notes.." />
+          <TextArea fun={rcvNotesFromInputField} value={notes.listNotes} />
           <div className='mt-2'></div>
-          
+          <Buttons title="Save" color="primary" variant='contained' size="small" />
 
-      
+
+
+
+
 
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <div className="w-full h-80 text-white">
-          <Buttons title="Add Bugs" variant="contained" size="small" color="warning" />
+          <div className="h-20 mb-4">
+            <div className='text-black text-xs'>Write Comment</div>
+            <TextArea fun={rcvNotesFromInputField} value={notes.listNotes} />
+          </div>
+          <input class="mt-8 mb-4 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" multiple />
+
+          <Buttons title="Add Bug" variant="contained" size="small" color="warning" />
+          <hr className='mt-8' />
+          <div className="bg-gray-100 text-gray-900">
+            <div className="px-2 py-1">Bug List</div>
+            <ListItems bugText="This is" date="20 jan 2022" />
+            <ListItems bugText="This is" date="20 jan 2022" />
+            <ListItems bugText="This is" date="20 jan 2022" />
+          </div>
         </div>
       </TabPanel>
 
