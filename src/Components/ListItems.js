@@ -12,6 +12,7 @@ import ClearIcon from '@mui/icons-material/Clear';
 export default function ListItems(props) {
   return (
     <div className="text-black">
+        {/* <span>{props.index}</span> */}
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper','padding':'2px 2px 2px 2px' }}>
       <ListItem>
         <ListItemAvatar>
@@ -20,7 +21,7 @@ export default function ListItems(props) {
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary={props.bugText} secondary={props.date} />
-        <span onClick={()=> props.removeNotes} className="cursor-pointer hover:shadow-lg">
+        <span onClick={()=> props.removeBug(props.index)} className="cursor-pointer hover:shadow-lg">
         <ClearIcon color="error" />
         </span>
       </ListItem>

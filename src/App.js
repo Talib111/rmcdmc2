@@ -9,6 +9,7 @@ import BasicGrid from './Components/BasicGrid';
 import OffcanvasTabs from './Components/OffcanvasTabs';
 import InputField from './Components/InputField';
 import ListItems from './Components/ListItems';
+import CollapseItem from './Components/CollapseItem';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Sidebar/>
         <Routes>
           {/* <Route path='/' element={<OffcanvasTabs />} /> */}
-          {/* <Route path='/' element={<ListItems />} /> */}
+          {/* <Route path='/' element={<CollapseItem />} /> */}
           <Route path='/prop-dtl' element={<PropDetailFull/>} />
         </Routes>
       <RightSidebar />

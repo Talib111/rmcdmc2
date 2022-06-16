@@ -13,6 +13,8 @@ import ImageCard from './ImageCard';
 import SidebarLink from './SidebarLink';
 import { connect } from "react-redux";
 import Sidebar2 from './Sidebar2';
+import CollapseItem from './CollapseItem';
+import CollapseItem2 from '../CollapseItem2';
 
 
 function Sidebar(props) {
@@ -41,7 +43,7 @@ function Sidebar(props) {
                     <ImageCard sideBarStatus={navCloseStatus} />
                 </div>
                 <ul className="list-none" style={navCloseStatus == true ? {'padding':'0px 2px 0px 2px'} : { 'padding':'0px 10px 0px 10px'}}>
-                   <SidebarLink title="Inbox" />
+                   {/* <SidebarLink title="Inbox" />
                    <SidebarLink title="Dashboard" />
                    <SidebarLink title="Prop-dtl" />
                    <SidebarLink title="Menu Permission" />
@@ -51,7 +53,13 @@ function Sidebar(props) {
                    <SidebarLink title="Water" />
                    <SidebarLink title="Trade" />
                    <SidebarLink title="Accounts" />
-                   <SidebarLink title="All Module Report" />
+                   <SidebarLink title="All Module Report" /> */}
+                   {/* <CollapseItem/>
+                   <CollapseItem/>
+                   <CollapseItem/>
+                   <CollapseItem/>
+                   <CollapseItem/> */}
+                   <CollapseItem2 title="Home" />
 
 
 
