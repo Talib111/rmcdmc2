@@ -38,7 +38,7 @@ function Sidebar(props) {
 
     return (
         <>
-            <div className="shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0  text-gray-700" style={navCloseStatus == true ? { 'width': '34px', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000','backgroundColor':'#FFFFFF' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000','backgroundColor':'#FFFFFF'}} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}>
+            <div className=" shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0  text-gray-700" style={navCloseStatus == true ? { 'width': '34px', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000','backgroundColor':'#FFFFFF' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000','backgroundColor':'#FFFFFF'}} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}>
                 <div className='py-4' >
                     <ImageCard sideBarStatus={navCloseStatus} />
                 </div>
@@ -63,6 +63,7 @@ function Sidebar(props) {
                    <SidebarLink title="Home" path="/" />
                    <SidebarLink title="Dashboard" path="/dashboard" />
                    <SidebarLink title="PropDetails" path="/prop-dtl" />
+                   <SidebarLink title="Master" path="/master" />
 
 
 

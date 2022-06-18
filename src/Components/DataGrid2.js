@@ -24,7 +24,7 @@ function DataGrid2() {
 
     return (
         <>
-            <div style={{ height: 400, width: '70%', 'marginLeft': '200px', backgroundColor: 'white' }}>
+            <div style={{ height: 400,  'marginLeft': '200px', backgroundColor: 'white' }}>
                 <div style={{ display: 'flex', height: '100%' }}>
                     <div style={{ flexGrow: 1 }}>
                     <DataGrid rows={rows} columns={columns} components={{ Toolbar: GridToolbar }} />
