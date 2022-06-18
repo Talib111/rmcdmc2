@@ -82,12 +82,9 @@ export default function OffcanvasTabs() {
         <span onClick={addNotesToList}>
         </span>
         <div className="w-full h-80 text-white mt-8">
-          <TextArea fun={rcvNotesFromInputField} value={notes.listNotes} />
+          <TextArea fun={rcvNotesFromInputField} value={notes.listNotes} bgColor="bg-sky-200" />
           <div className='mt-2'></div>
-          <Buttons title="Save" color="warning" variant='contained' size="small" />
-
-
-
+          <Buttons title="Save" color="primary" variant='contained' size="small" />
 
 
 
@@ -97,11 +94,11 @@ export default function OffcanvasTabs() {
         <div className="w-full h-80 text-white">
           <div className="h-20 mb-4">
             <div className='text-black text-xs'>Write Comment</div>
-            <TextArea fun={rcvBugComment} value="" />
+            <TextArea fun={rcvBugComment} value="" bgColor="bg-white" />
           </div>
           <input class="mt-8 mb-4 block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" multiple />
 
-          <span onClick={addBugList}><Buttons title="Add Bug" variant="contained" size="small" color="warning" /></span>
+          <span onClick={addBugList}><Buttons title="Add Bug" variant="contained" size="small" color="primary" /></span>
           <hr className='mt-8' />
           <div className="bg-gray-100 text-gray-900">
             <div className="px-2 py-1">Bug List</div>

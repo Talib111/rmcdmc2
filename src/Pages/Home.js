@@ -15,7 +15,7 @@ import HomeCard from '../Components/HomeCard'
 import { connect } from "react-redux";
 import RightSidebar from '../Components/RightSidebar'
 import BasicDetailsCard from '../Components/BasicDetailsCard'
-import DataGrid2 from '../Components/DataGrid'
+import DataGrid2 from '../Components/DataGrid2'
 
 // HOME FUNCTION
 function Home(props) {

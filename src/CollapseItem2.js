@@ -17,21 +17,21 @@ function CollapseItem2(props) {
         <>
             <li className='flex items-center pl-2 mt-4 cursor-pointer' onClick={expand} style={{ 'width': '250px' }}>
                 <div className="flex-none ">
-                    <FaEnvelope size={13} color="white" />
+                    <FaEnvelope size={14} color="black" />
                 </div>
                 <div className="flex-initial w-40">
                     <RawLink path="#" title={props.title} />
                 </div>
                 <div className="flex-1">
                     {
-                       collapseLink=='h-0'?<IoIosArrowForward size={13} color="white" />:<IoIosArrowDown size={13} color="white" />
+                       collapseLink=='h-0'?<IoIosArrowForward size={13} color="black" />:<IoIosArrowDown size={13} color="white" />
                     }
                 </div>
             </li>
             <div className={"collapse overflow-hidden bg-gray-700 "+collapseLink}>
                 <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
                     <div className="flex-none ">
-                        <FaEnvelope size={13} color="white" />
+                        <FaEnvelope size={14} color="black" />
                     </div>
                     <div className="flex-initial w-40">
                         <RawLink path="/home" title={props.title} />
@@ -40,7 +40,7 @@ function CollapseItem2(props) {
                 </li>
                 <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
                     <div className="flex-none ">
-                        <FaEnvelope size={13} color="white" />
+                        <FaEnvelope size={14} color="black" />
                     </div>
                     <div className="flex-initial w-40">
                         <RawLink path="/home" title={props.title} />
