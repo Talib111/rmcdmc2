@@ -19,6 +19,8 @@ import DocumentView from './Components/DocumentView'
 import DocumentViewPage from './Pages/DocumentViewPage';
 import { connect } from "react-redux";
 import Profile from './Pages/Profile';
+import Master from './Pages/Master';
+import SafSerach from './Pages/SafSerach';
 
 
 function App(props) {
@@ -49,9 +51,10 @@ function App(props) {
             <Route path='/' element={<DataGrid2 />} />
             <Route path='/prop-dtl' element={<PropDetailFull />} />
             <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/master' element={<DataGrid2 />} />
+            <Route path='/master' element={<Master />} />
             <Route path='/doc-view' element={<DocumentViewPage />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/saf-search' element={<SafSerach />} />
           </Routes>
         </div>
         <RightSidebar />

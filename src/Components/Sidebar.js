@@ -66,6 +66,7 @@ function Sidebar(props) {
                    <SidebarLink title="Master" path="/master" />
                    <SidebarLink title="Document" path="/doc-view" />
                    <SidebarLink title="Profile" path="/profile" />
+                   <SidebarLink title="Saf Search" path="/saf-search" />
 
 
 
