@@ -3,7 +3,7 @@ import { useReducer } from "react";
 const initialState = {
   navCloseStatus: false, //define current status of sidebar to open or close
   navOriginalCloseStatus: false, //define permanent state of sidebar for hover open and close
-  RightNavCloseStatus: true,
+  RightNavCloseStatus: true
 
 };
 

@@ -64,6 +64,7 @@ function Sidebar(props) {
                    <SidebarLink title="Dashboard" path="/dashboard" />
                    <SidebarLink title="PropDetails" path="/prop-dtl" />
                    <SidebarLink title="Master" path="/master" />
+                   <SidebarLink title="Document" path="/doc-view" />
 
 
 

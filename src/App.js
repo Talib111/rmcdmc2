@@ -14,6 +14,8 @@ import ChartTest from './Components/ChartTest';
 import DataGrid2 from './Components/DataGrid2';
 import Dashboard from './Pages/Dashboard';
 import TableData from './Components/TableData';
+import DocumentView from './Components/DocumentView'
+import DocumentViewPage from './Pages/DocumentViewPage';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
             <Route path='/prop-dtl' element={<PropDetailFull />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/master' element={<DataGrid2 />} />
+            <Route path='/doc-view' element={<DocumentViewPage />} />
           </Routes>
         </div>
         <RightSidebar />

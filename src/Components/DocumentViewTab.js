@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DetailCard from './DetailCard';
 import DataTable from './DetailsTable';
+import DocumentView from './DocumentView';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -40,7 +41,7 @@ function a11yProps(index) {
     };
 }
 
-export default function DetailsTab() {
+export default function DocumentViewTab() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -51,30 +52,18 @@ export default function DetailsTab() {
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label="Holding" {...a11yProps(0)} />
-                    <Tab label="Owner" {...a11yProps(1)} />
-                    <Tab label="Tax" {...a11yProps(2)} />
-                    <Tab label="Electricity" {...a11yProps(2)} />
-                    <Tab label="Floor" {...a11yProps(2)} />
-                    <Tab label="Payment" {...a11yProps(2)} />
+                    <Tab label="Documents" {...a11yProps(0)} />
+                    <Tab label="Full Details" {...a11yProps(1)} />
+                    
 
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                <DetailCard title="Holding" />
+               <DocumentView/>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <DataTable />
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-                <DetailCard title="Holding" />
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-                <DataTable />
-            </TabPanel><TabPanel value={value} index={4}>
-                <DetailCard title="Holding" />
-            </TabPanel><TabPanel value={value} index={5}>
-                <DataTable />
+               <DocumentView/>
             </TabPanel>
         </Box>
     );
