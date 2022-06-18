@@ -6,6 +6,7 @@
 //    DESCRIPTION - LogoText Component
 //////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
+import logo from './logo1.png'
 
 function LogoText() {
   return (
@@ -13,8 +14,8 @@ function LogoText() {
   
 
    <div className="grid grid-cols-12 place-items-center h-full">
-      <div className='pl-20'><img className='rounded-circle' style={{'width':'36px'}} src="http://smartulb.co.in/RMCDMC/public/assets/img/logo1.png" alt="image" /></div>
-      <div className='col-span-10'><h4 className='text-blue-400 font-bold text-lg'>JHARKHAND</h4></div>
+      <div className='col-span-2 col-start-2'><img style={{'width':'40px'}} src={logo} alt="hello" /></div>
+      <div className='col-span-9'><h4 className='text-blue-400 font-bold text-lg'>JHARKHAND</h4></div>
   </div>
    </>
   )

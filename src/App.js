@@ -18,6 +18,7 @@ import TableData from './Components/TableData';
 import DocumentView from './Components/DocumentView'
 import DocumentViewPage from './Pages/DocumentViewPage';
 import { connect } from "react-redux";
+import Profile from './Pages/Profile';
 
 
 function App(props) {
@@ -50,6 +51,7 @@ function App(props) {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/master' element={<DataGrid2 />} />
             <Route path='/doc-view' element={<DocumentViewPage />} />
+            <Route path='/profile' element={<Profile />} />
           </Routes>
         </div>
         <RightSidebar />

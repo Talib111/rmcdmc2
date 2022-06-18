@@ -82,6 +82,7 @@ export default function OffcanvasTabs() {
         <span onClick={addNotesToList}>
         </span>
         <div className="w-full h-80 text-white mt-8">
+        <div className='text-black text-xs'>Daily Notes</div>
           <TextArea fun={rcvNotesFromInputField} value={notes.listNotes} bgColor="bg-sky-200" />
           <div className='mt-2'></div>
           <Buttons title="Save" color="primary" variant='contained' size="small" />
