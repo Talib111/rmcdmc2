@@ -25,14 +25,23 @@ function Sidebar(props) {
 
   const [navCloseStatus, setnavCloseStatus] = useState('')
   const [menuPermission, setMenuPermission] = useState([
-    { id: 1, menuName: 'Home', menuPath: '/' },
-    { id: 2, menuName: 'Dashboard', menuPath: '/dashboard' },
-    { id: 3, menuName: 'PropDetails', menuPath: '/prop-dtl' },
-    { id: 4, menuName: 'Master', menuPath: '/master' },
-    { id: 5, menuName: 'Document', menuPath: '/doc-view' },
-    { id: 6, menuName: 'Profile', menuPath: '/profile' },
-    { id: 7, menuName: 'Saf Search', menuPath: '/saf-search' },
-    { id: 7, menuName: 'Deactivate', menuPath: '/deactivate' }
+    { id: 1, menuName: 'Home', menuPath: '/',subMenu:[{
+      menuName:'sub1', menuPath:'/sub1'},
+     { menuName:'sub2', menuPath:'/sub2'}
+    ] },
+    { id: 2, menuName: 'Dashboard', menuPath: '/dashboard',subMenu:[{
+      menuName:'sub1', menuPath:'/sub1'},
+     { menuName:'sub2', menuPath:'/sub2'},
+     { menuName:'sub3', menuPath:'/sub3'},
+    ] },
+    { id: 3, menuName: 'PropDetails', menuPath: '/prop-dtl',subMenu:[{
+      menuName:'sub1', menuPath:'/sub1'},
+     { menuName:'sub2', menuPath:'/sub2'}] },
+    { id: 4, menuName: 'Master', menuPath: '/master',subMenu:[] },
+    { id: 5, menuName: 'Document', menuPath: '/doc-view',subMenu:[] },
+    { id: 6, menuName: 'Profile', menuPath: '/profile',subMenu:[] },
+    { id: 7, menuName: 'Saf Search', menuPath: '/saf-search',subMenu:[] },
+    { id: 7, menuName: 'Deactivate', menuPath: '/deactivate',subMenu:[] }
   ])
   useEffect(() => {
     setnavCloseStatus(props.navCloseStatus)
@@ -82,7 +91,7 @@ function Sidebar(props) {
           }
           {/* {
                      menuPermission.map((data,index)=>(
-                       <CollapseItem2 title={data.menuName} path={data.menuPath}/>
+                       <CollapseItem2 title={data.menuName} path={data.menuPath} subMenu={data.subMenu}/>
                      ))
                    } */}
 

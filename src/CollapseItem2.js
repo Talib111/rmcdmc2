@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { FaEnvelope } from 'react-icons/fa';
 import RawLink from './Components/RawLink'
 import { IoIosArrowForward } from 'react-icons/io';
@@ -7,10 +7,10 @@ import SidebarLink from './Components/SidebarLink';
 function CollapseItem2(props) {
 
     const [collapseLink, setcollapseLink] = useState('h-0')
-    const expand = ()=>{
-        if(collapseLink=='h-0'){
+    const expand = () => {
+        if (collapseLink == 'h-0') {
             setcollapseLink('h-auto')
-        }else{
+        } else {
             setcollapseLink('h-0')
         }
     }
@@ -23,32 +23,18 @@ function CollapseItem2(props) {
                 <div className="flex-initial w-40">
                     <div className='text-sm pl-2'>{props.title}</div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1" style={props.subMenu.length==0?{'display':'none'}:{'display':'block'}}>
                     {
-                       collapseLink=='h-0'?<IoIosArrowForward size={13} color="black" />:<IoIosArrowDown size={13} color="black" />
+                        collapseLink == 'h-0' ? <IoIosArrowForward size={13} color="black" /> : <IoIosArrowDown size={13} color="black" />
                     }
                 </div>
             </li>
-            <div className={"collapse overflow-hidden bg-white bg-sky-100 "+collapseLink}>
-                {/* <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
-                    <div className="flex-none ">
-                        <FaEnvelope size={14} color="black" />
-                    </div>
-                    <div className="flex-initial w-40">
-                        <RawLink path="/home" title={props.title} />
-                    </div>
-                   
-                </li>
-                <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
-                    <div className="flex-none ">
-                        <FaEnvelope size={14} color="black" />
-                    </div>
-                    <div className="flex-initial w-40">
-                        <RawLink path="/home" title={props.title} />
-                    </div>
-                   
-                </li> */}
-                <SidebarLink title="Hhhh" path="/hhhh"/>
+            <div className={"collapse overflow-hidden bg-white bg-sky-50 pl-4 " + collapseLink}>
+                {
+                    props.subMenu.map((data) => (
+                        <SidebarLink title={data.menuName}  path="/hhhh" />
+                    ))
+                }
             </div>
         </>
     )
