@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DetailCard from './DetailCard';
-import DataTable from './DetailsTable';
+import DetailsTable from './DetailsTable';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -47,6 +47,13 @@ export default function DetailsTab() {
         setValue(newValue);
     };
 
+    const ownerData = [
+        { id: 1, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' },
+        { id: 2, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' },
+        { id: 3, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' }
+    ]
+    const holdingData = { id: 1, ward: 'mark', new_ward: 'markFather', holding: 'S/O', new_holding: 123456789456 }
+
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -61,20 +68,21 @@ export default function DetailsTab() {
                 </Tabs>
             </Box>
             <TabPanel value={value} index={0}>
-                <DetailCard title="Holding" />
+                <DetailCard dataSet={holdingData} />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <DataTable />
+                {/* PASSING ARRAY OF OBJECTS IN detailsTable COMPONENT */}
+                <DetailsTable dataSet={ownerData} />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <DetailCard title="Holding" />
+                <DetailCard dataSet={holdingData} />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <DataTable />
+                <DetailsTable dataSet={ownerData} />
             </TabPanel><TabPanel value={value} index={4}>
-                <DetailCard title="Holding" />
+                <DetailCard dataSet={holdingData} />
             </TabPanel><TabPanel value={value} index={5}>
-                <DataTable />
+                <DetailsTable dataSet={ownerData} />
             </TabPanel>
         </Box>
     );

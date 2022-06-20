@@ -1,89 +1,50 @@
+//////////////////////////////////////////////////////////////////////////////////////
+//    Author - Talib Hussain
+//    Version - 1.0
+//    Date - 20 june 2022
+//    Revision - 1
+//    Project - rmcdmc
+//    Component  - DetailsTable
+//    DESCRIPTION - DetailsTable Component
+//////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
+import Td from './Td'
+import Th from './Th'
 
 function DetailsTable() {
+    const props = {
+        dataSet: [{ id: 1, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' },
+        { id: 2, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' },
+        { id: 3, owner_name: 'mark', Guardian_name: 'markFather', relation: 'S/O', aadhar: 123456789456, pan: 'AVSPH14277', gender: 'male', dob: '20 june 1999' }]
+    }
     return (
         <>
-
             <div className="container mx-auto max-w-full ml-0">
-                <div className="py-2">
+                <div className="py-0">
                     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                         <div className="inline-block min-w-full shadow rounded-lg overflow-hidden">
                             <table className="min-w-full leading-normal">
                                 <thead className='font-bold'>
                                     <tr>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            Owner Name
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            Guardian Name
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            Relation
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                           Aadhar
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            PAN
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            Email
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            Gender
-                                        </th>
-                                        <th scope="col" className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
-                                            DOB
-                                        </th>
+                                        {
+                                            Object.keys(props.dataSet[0]).map((key, index) => (
+                                                <Th value={key} />
+                                            ))
+                                        }
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                Admin
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                Admin
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                            <p className="text-gray-900 whitespace-no-wrap">
-                                                12/09/2020
-                                            </p>
-                                        </td>
-                                        
-                                        
-                                    </tr>
-                                   
+                                    {
+                                        props.dataSet.map((data) => (
+                                            <tr>
+                                                {
+                                                    Object.keys(data).map((key, index) => (
+                                                        <Td value={data[key]} />
+                                                    ))
+                                                }
+                                            </tr>
+                                        ))
+                                    }
                                 </tbody>
                             </table>
                         </div>
@@ -96,3 +57,7 @@ function DetailsTable() {
 }
 
 export default DetailsTable
+/**
+ * Exported to :
+ * 1. DetailsTab component
+ */

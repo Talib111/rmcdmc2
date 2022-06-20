@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DetailCard from './DetailCard';
-import DataTable from './DetailsTable';
+import DetailsTable from './DetailsTable';
 import DocumentView from './DocumentView';
 
 function TabPanel(props) {
@@ -62,7 +62,7 @@ export default function DocumentViewTab() {
                <DocumentView/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <DataTable />
+                <DetailsTable />
                <DocumentView/>
             </TabPanel>
         </Box>
