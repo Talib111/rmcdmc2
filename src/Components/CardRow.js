@@ -12,7 +12,7 @@ import React from 'react'
 function cardRow(props) {
     return (
         <>
-            <div className='font-semibold text-gray-600 text-sm'>{props.title} :</div>
+            <div className='font-semibold text-sm'>{props.title} :</div>
             <div className='text-sm'>{props.value}</div>
         </>
     )

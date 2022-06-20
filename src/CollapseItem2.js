@@ -3,6 +3,7 @@ import { FaEnvelope } from 'react-icons/fa';
 import RawLink from './Components/RawLink'
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
+import SidebarLink from './Components/SidebarLink';
 function CollapseItem2(props) {
 
     const [collapseLink, setcollapseLink] = useState('h-0')
@@ -29,7 +30,7 @@ function CollapseItem2(props) {
                 </div>
             </li>
             <div className={"collapse overflow-hidden bg-white bg-sky-100 "+collapseLink}>
-                <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
+                {/* <li className='flex items-center mt-2 pl-6' style={{ 'width': '250px' }}>
                     <div className="flex-none ">
                         <FaEnvelope size={14} color="black" />
                     </div>
@@ -46,7 +47,8 @@ function CollapseItem2(props) {
                         <RawLink path="/home" title={props.title} />
                     </div>
                    
-                </li>
+                </li> */}
+                <SidebarLink title="Hhhh" path="/hhhh"/>
             </div>
         </>
     )

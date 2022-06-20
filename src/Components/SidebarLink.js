@@ -23,6 +23,7 @@ function SidebarLink(props) {
                     <RawLink path={props.path} title={props.title} />
                 </div>
             </li>
+            {props.children}
         </>
     )
 }

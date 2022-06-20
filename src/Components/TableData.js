@@ -12,7 +12,7 @@ export default function TableData() {
   });
 
   return (
-    <div className='bg-white px-2 mt-12' style={{ height: 400, width: '100%' }}>
+    <div className='bg-white px-2 mt-12 sh' style={{ height: 400, width: '100%' }}>
       <DataGrid {...data} />
     </div>
   );

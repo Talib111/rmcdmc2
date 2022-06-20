@@ -5,7 +5,7 @@
 //    Revison - 1
 //    Project - rmcdmc
 //    Component  - RightSidebar
-//    DESCRIPTION - This is toggle RightSidebar component.
+//    DESCRIPTION - This is RightSidebar component.
 //////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
 import {BsChat} from 'react-icons/bs'
@@ -50,6 +50,6 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, mapDispatchToProps)(RightSidebar);
 /**
  * Exported to :
- * 1. Home Page
+ * 1. App.js
  * 
  */

@@ -23,5 +23,5 @@ function Header() {
 export default Header
 /**
  * Exported to :
- * 1. Home Page
+ * 1. App.js
  */

@@ -6,15 +6,15 @@
 //    DESCRIPTION - RawLink Component
 //////////////////////////////////////////////////////////////////////////////////////
 
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function RawLink(props) {
   return (
-   <>
-   {/* <Link to={props.path}>{props.title}</Link> */}
-  <Link to={{pathname:props.path}}><li className='' style={{'textDecoration':'none','fontSize':'13px','fontWeight':'400','paddingLeft':'10px'}} href={props.path}>{props.title}</li></Link>
-   
-   </>
+    <>
+      {/* <Link to={props.path}>{props.title}</Link> */}
+      <NavLink to={{ pathname: props.path }}><li style={{ 'textDecoration': 'none', 'fontSize': '13px', 'fontWeight': '400', 'paddingLeft': '10px' }} href={props.path}>{props.title}</li></NavLink>
+     
+    </>
   )
 }
 

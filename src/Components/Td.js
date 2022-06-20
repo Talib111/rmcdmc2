@@ -12,7 +12,7 @@ import React from 'react'
 function Td(props) {
     return (
         <>
-            <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+            <td className="px-5 py-3 border-b border-gray-200 bg-white text-sm">
                 <p className="text-gray-900 whitespace-no-wrap">
                     {props.value}
                 </p>
