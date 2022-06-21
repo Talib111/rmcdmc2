@@ -6,7 +6,6 @@ import PropDetailFull from './Pages/PropDetailFull'
 import RightSidebar from './Components/RightSidebar';
 import Sidebar from './Components/Sidebar';
 import Header from './Components/Header';
-import BasicGrid from './Components/BasicGrid';
 import OffcanvasTabs from './Components/OffcanvasTabs';
 import InputField from './Components/InputField';
 import ListItems from './Components/ListItems';
@@ -23,6 +22,10 @@ import SafSerach from './Pages/SafSerach';
 import ToastComponent from './Components/ToastComponent';
 import ModalComponent from './Components/ModalComponent';
 import FormTest from './Components/testComponents/FormTest';
+import InboxDa from './Pages/verificationLevels/dealingAssistant/InboxDa';
+import InboxSi from './Pages/verificationLevels/sectionIncharge/InboxSi';
+import InboxEo from './Pages/verificationLevels/executiveOfficer/InboxEo';
+import BasicTable from './Components/staticData/BasicTable';
 
 
 function App(props) {
@@ -57,9 +60,14 @@ function App(props) {
             <Route path='/doc-view' element={<DocumentViewPage />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/saf-search' element={<SafSerach />} />
-            <Route path='/toast' element={<ToastComponent />} />
+            <Route path='/table' element={<BasicTable />} />
+            {/* <Route path='/toast' element={<ToastComponent />} />
             <Route path='/modal' element={<ModalComponent />} />
             <Route path='/formik' element={<FormTest />} />
+            <Route path='/data' element={<DataGrid2 />} /> */}
+            <Route path='/inbox-da' element={<InboxDa />} />
+            <Route path='/inbox-si' element={<InboxSi />} />
+            <Route path='/inbox-eo' element={<InboxEo />} />
           </Routes>
         </div>
         <RightSidebar />

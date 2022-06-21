@@ -41,7 +41,12 @@ function Sidebar(props) {
     { id: 5, menuName: 'Document', menuPath: '/doc-view',subMenu:[] },
     { id: 6, menuName: 'Profile', menuPath: '/profile',subMenu:[] },
     { id: 7, menuName: 'Saf Search', menuPath: '/saf-search',subMenu:[] },
-    { id: 7, menuName: 'Deactivate', menuPath: '/deactivate',subMenu:[] }
+    { id: 7, menuName: 'Table', menuPath: '/table',subMenu:[] },
+    // { id: 7, menuName: 'Deactivate', menuPath: '/deactivate',subMenu:[] },
+    { id: 7, menuName: 'InboxDa', menuPath: '/inbox-da',subMenu:[] },
+    { id: 7, menuName: 'InboxSi', menuPath: '/inbox-si',subMenu:[] },
+    { id: 7, menuName: 'InboxEo', menuPath: '/inbox-eo',subMenu:[] }
+
   ])
   useEffect(() => {
     setnavCloseStatus(props.navCloseStatus)

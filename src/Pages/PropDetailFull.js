@@ -10,7 +10,7 @@
 import React from 'react'
 import BasicDetailsCard from '../Components/BasicDetailsCard'
 import DetailCard from '../Components/DetailCard'
-import DetailsTab from '../Components/DetailsTab'
+import DetailsTab from '../Components/propdetailsfull/DetailsTab'
 
 function PropDetailFull() {
   return (

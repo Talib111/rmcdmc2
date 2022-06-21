@@ -4,8 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import DetailCard from './DetailCard';
-import DetailsTable from './DetailsTable';
+import DetailCard from '../DetailCard';
+import DetailsTable from '../DetailsTable';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
