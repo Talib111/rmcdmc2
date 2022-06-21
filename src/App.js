@@ -11,7 +11,6 @@ import OffcanvasTabs from './Components/OffcanvasTabs';
 import InputField from './Components/InputField';
 import ListItems from './Components/ListItems';
 import CollapseItem from './Components/CollapseItem';
-import ChartTest from './Components/ChartTest';
 import DataGrid2 from './Components/DataGrid2';
 import Dashboard from './Pages/Dashboard';
 import TableData from './Components/TableData';
@@ -21,6 +20,9 @@ import { connect } from "react-redux";
 import Profile from './Pages/Profile';
 import Master from './Pages/Master';
 import SafSerach from './Pages/SafSerach';
+import ToastComponent from './Components/ToastComponent';
+import ModalComponent from './Components/ModalComponent';
+import FormTest from './Components/testComponents/FormTest';
 
 
 function App(props) {
@@ -55,6 +57,9 @@ function App(props) {
             <Route path='/doc-view' element={<DocumentViewPage />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/saf-search' element={<SafSerach />} />
+            <Route path='/toast' element={<ToastComponent />} />
+            <Route path='/modal' element={<ModalComponent />} />
+            <Route path='/formik' element={<FormTest />} />
           </Routes>
         </div>
         <RightSidebar />
