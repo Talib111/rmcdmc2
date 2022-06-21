@@ -1,4 +1,9 @@
+import { format } from 'date-fns'
 export const COLUMNS = [
+    {
+        Header:'Id',
+        accessor: 'id'
+    },
     {
         Header:'First Name',
         accessor: 'first_name'
@@ -8,8 +13,10 @@ export const COLUMNS = [
         accessor: 'last_name'
     },
     {
-        Header:'Email',
-        accessor: 'email'
+        Header:'DOB',
+        accessor: 'dob',
+        Cell: ({value})=>{ return format(new Date(value), 'dd/MM/yyyy')}
+
     },
     {
         Header:'Gender',
