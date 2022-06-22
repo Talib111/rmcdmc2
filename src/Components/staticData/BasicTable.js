@@ -30,7 +30,8 @@ function BasicTable() {
         setGlobalFilter
     } = useTable({
         columns,
-        data
+        data,
+        initialState: {pageIndex : 3}
     }, useGlobalFilter, useSortBy, usePagination)
 
     const { globalFilter, pageIndex } = state
