@@ -48,10 +48,10 @@ function Sidebar(props) {
     { id: 7, menuName: 'InboxEo', menuPath: '/inbox-eo',subMenu:[] }
 
   ])
-  useEffect(() => {
-    setnavCloseStatus(props.navCloseStatus)
+  // useEffect(() => {
+  //   setnavCloseStatus(props.navCloseStatus)
 
-  }, [props.navCloseStatus])
+  // }, [props.navCloseStatus])
 
   const expandSidebar = () => {
     if (props.navOriginalCloseStatus == true) {
@@ -66,12 +66,12 @@ function Sidebar(props) {
 
   return (
     <>
-      <div className=" shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0  text-gray-700 transition-all z-50 border-r-2" style={navCloseStatus == true ? { 'width': '34px', 'paddingRight': '0' } : { 'width': '250px', 'paddingRight': '2px' }} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}>
+      <div className=" shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0  text-gray-700 transition-all z-50 border-r-2" style={props.navCloseStatus == true ? { 'width': '34px', 'paddingRight': '0' } : { 'width': '250px', 'paddingRight': '2px' }} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}>
         {/* <div className=" shadow-lg px-0 bg-white h-full pb-12 overflow-hidden absolute top-16 left-0  text-gray-700" style={navCloseStatus == true ? { 'width': '34px', 'paddingRight': '0', 'transition': '0.4s','zIndex':'1000' } : { 'width': '250px', 'paddingRight': '2px', 'transition': '0.4s','zIndex':'1000'}} onMouseEnter={expandSidebar} onMouseLeave={contractSidebar}> */}
         <div className='py-4' >
-          <ImageCard sideBarStatus={navCloseStatus} />
+          <ImageCard sideBarStatus={props.navCloseStatus} />
         </div>
-        <ul className="list-none" style={navCloseStatus == true ? { 'padding': '0px 2px 0px 2px' } : { 'padding': '0px 10px 0px 10px' }}>
+        <ul className="list-none" style={props.navCloseStatus == true ? { 'padding': '0px 2px 0px 2px' } : { 'padding': '0px 10px 0px 10px' }}>
           {/* <CollapseItem2 title="Home" path="/" /> */}
           {/* <SidebarLink title="Home" path="/" />
                    <SidebarLink title="Dashboard" path="/dashboard" />
