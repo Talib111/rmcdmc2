@@ -26,6 +26,10 @@ import InboxDa from './Pages/verificationLevels/dealingAssistant/InboxDa';
 import InboxSi from './Pages/verificationLevels/sectionIncharge/InboxSi';
 import InboxEo from './Pages/verificationLevels/executiveOfficer/InboxEo';
 import BasicTable from './Components/staticData/BasicTable';
+import ButtonLoader from './Components/common/ButtonLoader';
+import RippleAnimation from './Components/common/RippleAnimation';
+import StateArrayObjectUpdate from './Components/testComponents/StateArrayObjectUpdate';
+import Grid from './Components/testComponents/Grid';
 
 
 function App(props) {
@@ -50,7 +54,7 @@ function App(props) {
       <BrowserRouter>
         <Header />
         <Sidebar />
-        <div className={"sm:w-full transition-all pl-12 "+boxWidth.width+ " sm:ml-0 "+boxWidth.margin +" mt-2"}>
+        <div className={"sm:w-full transition-all pl-12  "+boxWidth.width+ " sm:ml-0 "+boxWidth.margin +" mt-2"}>
         {/* <div className={"sm:w-full "+"md:w-4/5"+ " sm:ml-0 "+"md:ml-64" +" mt-2"}> */}
           <Routes>
             <Route path='/' element={<DataGrid2 />} />
@@ -61,6 +65,10 @@ function App(props) {
             <Route path='/profile' element={<Profile />} />
             <Route path='/saf-search' element={<SafSerach />} />
             <Route path='/table' element={<BasicTable />} />
+            <Route path='/loader' element={<ButtonLoader />} />
+            <Route path='/anm' element={<RippleAnimation />} />
+            <Route path='/state' element={<StateArrayObjectUpdate />} />
+            <Route path='/grid' element={<Grid />} />
             {/* <Route path='/toast' element={<ToastComponent />} />
             <Route path='/modal' element={<ModalComponent />} />
             <Route path='/formik' element={<FormTest />} />

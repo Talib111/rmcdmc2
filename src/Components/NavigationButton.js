@@ -32,7 +32,7 @@ function NavigationButton(props) {
         <>
             <div className="grid grid-cols-12 place-items-center h-full">
                 <div className='cursor-pointer bg-gray-100 p-2 rounded-lg' onClick={navToggle}><HiOutlineMenuAlt2 color='black' size={16} /></div>
-                <div className='col-span-10'><h4 className='text-gray-900 font-bold text-lg'>Ranchi Municipal Corporation</h4></div>
+                <div className='col-span-10'><h4 className='text-gray-900 font-bold text-sm sm:text-lg text-center'>Ranchi Municipal Corporation</h4></div>
             </div>
         </>
     )

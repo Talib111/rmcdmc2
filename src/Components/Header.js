@@ -9,13 +9,13 @@
 //////////////////////////////////////////////////////////////////////////////////////
 import React from 'react'
 import TopHeaderNav from './TopHeaderNav'
+import TopHeaderNav2 from './TopHeaderNav2'
 
 function Header() {
   return (
    <>
    <TopHeaderNav/>
-   {/* <div className="w-100" style={{'backgroundColor':'#25476A','height':'160px'}}>
-   </div> */}
+   {/* <TopHeaderNav2/> */}
    </>
   )
 }

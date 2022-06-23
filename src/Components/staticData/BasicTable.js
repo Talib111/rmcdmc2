@@ -1,10 +1,13 @@
-import React, { useMemo } from 'react'
+import React, { useMemo,useState } from 'react'
 import { useTable, useSortBy, useGlobalFilter, usePagination } from 'react-table'
+import {AiOutlineArrowDown} from 'react-icons/ai'
+import { CSVLink } from "react-csv";
 import MOCK_DATA from './MOCK_DATA.json'
 import { COLUMNS } from './Columns'
 import GlobalFilter from './GlobalFilter'
 
 function BasicTable() {
+    const [bounce, setbounce] = useState('hidden')
     const columns = useMemo(() => COLUMNS, [])
     const data = useMemo(() => MOCK_DATA, [])
 
@@ -26,28 +29,34 @@ function BasicTable() {
         pageOptions,
         gotoPage,
         pageCount,
+        setPageSize,
         state,
         setGlobalFilter
     } = useTable({
         columns,
         data,
-        initialState: {pageIndex : 3}
+        initialState: { pageIndex: 3 }
     }, useGlobalFilter, useSortBy, usePagination)
 
-    const { globalFilter, pageIndex } = state
+    const { globalFilter, pageIndex, pageSize } = state
     return (
         <>
-            <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+
+            <div className="flex mb-2 pb-2">
+                <div className='flex-initial'><GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} /></div>
+                {/* <div className='flex-initial ml-2'><button className='bg-sky-400 px-3 shadow-lg rounded py-1 text-white hover:shadow-2xl hover:bg-sky-500 text-center relative'><CSVLink data={data}>Export</CSVLink></button></div> */}
+                <div className='flex-initial ml-2'><button className='bg-sky-400 px-3 pr-3  shadow-lg rounded py-1 text-white hover:shadow-2xl hover:bg-green-600 text-center relative' onMouseEnter={() => setbounce('')} onMouseLeave={() => setbounce('hidden')}><CSVLink data={data}>Export</CSVLink><div className={bounce + ' absolute h-full top-3 text-sm left-0 text-center animate-bounce'}><AiOutlineArrowDown /></div></button></div>
+            </div>
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-2 overflow-x-auto bg-white">
                 <div className="inline-block min-w-full rounded-lg overflow-hidden bg-white">
                     <table {...getTableBodyProps} className="min-w-full leading-normal">
-                        <thead className='font-bold text-left text-sm'>
+                        <thead className='font-bold text-left text-sm bg-sky-50'>
                             {
                                 headerGroups.map((headerGroup) => (
                                     <tr {...headerGroup.getHeaderGroupProps()}>
                                         {
                                             headerGroup.headers.map((column) => (
-                                                <th {...column.getHeaderProps(column.getSortByToggleProps())} className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">{column.render('Header')}
+                                                <th {...column.getHeaderProps(column.getSortByToggleProps())} className="px-5 py-3 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">{column.render('Header')}
                                                     <span>{column.isSorted ? (column.isSortedDesc ? '⬆️' : '⬇️') : ''}</span></th>
 
                                             ))
@@ -77,8 +86,8 @@ function BasicTable() {
                     <div>
                         <span>
                             | Go to page : {''}
-                            <input className='border-2 border-black rounded-lg' type="text" defaultValue={pageIndex + 1} onChange={(e)=>{
-                                const pageNumber = e.target.value ? Number(e.target.value) - 1:0
+                            <input className='border-2 border-black rounded-lg' type="text" defaultValue={pageIndex + 1} onChange={(e) => {
+                                const pageNumber = e.target.value ? Number(e.target.value) - 1 : 0
                                 gotoPage(pageNumber)
                             }} />
                         </span>
@@ -88,6 +97,14 @@ function BasicTable() {
                                 {pageIndex + 1} of {pageOptions.length}
                             </strong>{''}
                         </span>
+                        <select value={pageSize} onChange={(e) => setPageSize(Number(e.target.value))}>
+                            {[10, 25, 50].map((pageSize) => (
+                                <option key={pageSize} value={pageSize}>
+                                    show {pageSize}
+                                </option>
+                            ))}
+
+                        </select>
                         <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>{'<<'} </button>
                         <button className={!canPreviousPage ? 'opacity-50' : 'opacity-100' + ' text-xl'} onClick={() => previousPage()} disabled={!canPreviousPage}>⬅️</button>
                         <button className={!canNextPage ? 'opacity-50' : 'opacity-100' + ' text-xl'} onClick={() => nextPage()} disabled={!canNextPage}>➡️</button>

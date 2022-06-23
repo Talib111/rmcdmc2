@@ -16,6 +16,7 @@ function LogoText() {
    <div className="grid grid-cols-12 place-items-center h-full">
       <div className='col-span-2 col-start-2'><img style={{'width':'40px'}} src={logo} alt="hello" /></div>
       <div className='col-span-9'><h4 className='text-blue-400 font-bold text-lg'>JHARKHAND</h4></div>
+      {/* <div className='col-span-9'><h4 className='text-gray-800 font-bold text-lg'>JHARKHAND</h4></div> */}
   </div>
    </>
   )

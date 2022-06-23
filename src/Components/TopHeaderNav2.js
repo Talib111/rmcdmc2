@@ -14,7 +14,7 @@ function TopHeaderNav() {
   return (
     <>
       {/* <div className="grid grid-cols-12 w-100 px-0 h-16" style={{'backgroundColor':'#25476A'}}> */}
-      <div className="grid grid-cols-12 w-100 px-0 h-16 bg-white shadow-xl  z-50 relative" >
+      <div className="grid grid-cols-12 w-100 px-0 h-16 bg-sky-100 shadow-xl  z-50 relative" >
         {/* <div className="col-span-12 absolute w-10/12 h-full bg-sky-100"></div> */}
        <div className="hidden sm:block col-span-0 sm:col-span-2"> <LogoText /></div>
        <div className='col-span-9 sm:col-span-3 place-items-center'><NavigationButton/></div>

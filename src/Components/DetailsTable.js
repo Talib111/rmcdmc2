@@ -22,10 +22,10 @@ function DetailsTable() {
             <div className="container mx-auto max-w-full ml-0">
                 <div className="py-0">
                     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-2 overflow-x-auto">
-                        <div className="inline-block min-w-full shadow-xl rounded-lg overflow-hidden">
+                        <div className="inline-block min-w-full shadow-xl rounded-sm overflow-hidden">
                             <table className="min-w-full leading-normal">
-                                <thead className='font-bold'>
-                                    <tr>
+                                <thead className='font-bold bg-sky-50'>
+                                    <tr >
                                         {
                                             Object.keys(props.dataSet[0]).map((key, index) => (
                                                 <Th value={key} />

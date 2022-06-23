@@ -9,21 +9,21 @@ function DocumentView() {
                     <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-0 overflow-x-auto">
                         <div className="inline-block min-w-full rounded-lg overflow-hidden">
                             <table className="min-w-full leading-normal">
-                                <thead>
+                                <thead className='bg-sky-100'>
                                     <tr className='font-semibold'>
-                                        <th scope="col" className="px-5 py-2 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
+                                        <th scope="col" className="px-5 py-2 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
                                             #
                                         </th>
-                                        <th scope="col" className="px-5 py-2 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
+                                        <th scope="col" className="px-5 py-2 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
                                             Document Name
                                         </th>
-                                        <th scope="col" className="px-5 py-2 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
+                                        <th scope="col" className="px-5 py-2 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
                                             View
                                         </th>
-                                        <th scope="col" className="px-5 py-2 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
+                                        <th scope="col" className="px-5 py-2 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
                                             Status
                                         </th>
-                                        <th scope="col" className="px-5 py-2 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
+                                        <th scope="col" className="px-5 py-2 border-b border-gray-200 text-gray-800  text-left text-sm uppercase">
                                             Remarks
                                         </th>
                                     </tr>

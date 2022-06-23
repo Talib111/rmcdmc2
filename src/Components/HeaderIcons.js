@@ -11,6 +11,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { BsBell } from 'react-icons/bs'
 import { connect } from "react-redux";
+import RippleAnimation from './common/RippleAnimation'
 
 
 
@@ -30,8 +31,8 @@ function HeaderIcons(props) {
   return (
     <>
       <div className="grid grid-cols-12 place-items-center h-full pr-12">
-        <div className='cursor-pointer col-start-9' ><div className='bg-gray-100 p-2 rounded-lg'><BsBell color='black' size={16} /></div></div>
-        <div className='cursor-pointer ml-8' ><div className='bg-gray-100 p-2 rounded-lg'><AiOutlineUser color='black' size={16} /></div></div>
+        <div className='cursor-pointer col-start-1 sm:col-start-9' ><div className='bg-gray-100 p-2 rounded-lg relative'><BsBell color='black' size={16} /><RippleAnimation/></div></div>
+        <div className='cursor-pointer ml-8' ><div className='bg-gray-100 p-2 rounded-lg '><AiOutlineUser color='black' size={16} /></div></div>
         <div className='cursor-pointer' onClick={rightNavToggle}><div className='bg-gray-100 p-2 rounded-lg ml-16'><BsThreeDotsVertical color='black' size={16} /></div></div>
 
       </div>
